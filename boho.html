@@ -6,230 +6,230 @@
   <title>BOHO | Estilo Bohemio</title>
   <style>
     body {
-      font-family: 'Arial', sans-serif;
-      background-color: #ffb4b4;
-      margin: 0;
-      padding: 0;
-      color: #333;
-    }
+  font-family: 'Arial', sans-serif;
+  background-color: #1e1e1e;
+  margin: 0;
+  padding: 0;
+  color: #f0e6f6;
+}
 
-    header {
-      background-color: #FFDCDC;
-      padding: 20px;
-      text-align: center;
-    }
+header {
+  background-color: #2c1f2e;
+  padding: 20px;
+  text-align: center;
+}
 
-    header h1 {
-      margin: 0;
-      font-size: 2.5em;
-      color: #6d1b7b;
-    }
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+  color: #ffb6f0;
+}
 
-    .eslogan {
-      font-style: italic;
-      margin: 5px 0 15px;
-    }
+.eslogan {
+  font-style: italic;
+  margin: 5px 0 15px;
+  color: #d9a7f5;
+}
 
-    nav a {
-      margin: 0 10px;
-      text-decoration: none;
-      color: #6d1b7b;
-      font-weight: bold;
-    }
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #f48fb1;
+  font-weight: bold;
+}
 
-    nav a:hover {
-      text-decoration: underline;
-    }
+nav a:hover {
+  text-decoration: underline;
+}
 
-    /* CATÁLOGO */
-    .catalogo {
-      max-width: 1200px;
-      margin: 40px auto;
-      padding: 20px;
-      background-color: #ffe9e3;
-      border-radius: 15px;
-      border: 2px solid #e6a4b4;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
+.catalogo {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #2b2230;
+  border-radius: 15px;
+  border: 2px solid #5c2a4a;
+  box-shadow: 0 0 10px rgba(255, 182, 193, 0.1);
+}
 
-    .catalogo h2 {
-      text-align: center;
-      color: #7b3e57;
-      font-size: 2.2em;
-      margin-bottom: 30px;
-    }
+.catalogo h2 {
+  text-align: center;
+  color: #f48fb1;
+  font-size: 2.2em;
+  margin-bottom: 30px;
+}
 
-    /* Flex para productos */
-    .productos {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 25px;
-      justify-content: center;
-    }
+.productos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+}
 
-    /* Cada tarjeta producto */
-    .producto {
-      background-color: #fff;
-      border-radius: 15px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      padding: 15px;
-      width: 260px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      border: 1px solid #ffdadf;
-    }
+.producto {
+  background-color: #3a2c40;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  padding: 15px;
+  width: 260px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #5c2a4a;
+}
 
-    .producto:hover {
-      transform: scale(1.05);
-      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
-    }
+.producto:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(255, 182, 193, 0.2);
+}
 
-    .producto img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 10px;
-      margin-bottom: 10px;
-    }
+.producto img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
 
-    .producto h3 {
-      color: #8b3a62;
-      font-size: 1.2em;
-      margin: 10px 0 5px;
-      text-align: center;
-    }
+.producto h3 {
+  color: #ffb6f0;
+  font-size: 1.2em;
+  margin: 10px 0 5px;
+  text-align: center;
+}
 
-    .producto p {
-      font-size: 0.95em;
-      margin: 4px 0;
-      text-align: center;
-    }
+.producto p {
+  font-size: 0.95em;
+  margin: 4px 0;
+  text-align: center;
+  color: #f0d9e7;
+}
 
-    .producto button {
-      margin-top: auto;
-      padding: 10px 15px;
-      background-color: #f48fb1;
-      border: none;
-      border-radius: 8px;
-      color: white;
-      font-weight: bold;
-      font-size: 1em;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
+.producto button {
+  margin-top: auto;
+  padding: 10px 15px;
+  background-color: #d36ba8;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
 
-    .producto button:hover {
-      background-color: #ec407a;
-    }
+.producto button:hover {
+  background-color: #ec407a;
+}
 
-    /* CARRITO */
-    .seccion.carrito {
-      max-width: 600px;
-      margin: 40px auto;
-      background-color: #f5cfbd;
-      padding: 20px;
-      border-radius: 10px;
-      border: 2px solid #f06292;
-    }
+.seccion.carrito {
+  max-width: 600px;
+  margin: 40px auto;
+  background-color: #312633;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid #f06292;
+}
 
-    .seccion.carrito h2 {
-      color: #6d1b7b;
-      text-align: center;
-    }
+.seccion.carrito h2 {
+  color: #ffb6f0;
+  text-align: center;
+}
 
-    #items-carrito {
-      list-style: none;
-      padding: 0;
-      margin: 20px 0;
-    }
+#items-carrito {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
 
-    #items-carrito li {
-      background-color: white;
-      margin-bottom: 8px;
-      padding: 10px;
-      border-radius: 5px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border: 1px solid #f06292;
-    }
+#items-carrito li {
+  background-color: #47394c;
+  margin-bottom: 8px;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #f06292;
+}
 
-    #items-carrito li button {
-      background-color: #ec407a;
-      padding: 5px 8px;
-      font-weight: normal;
-      border-radius: 4px;
-      cursor: pointer;
-      border: none;
-      transition: background-color 0.3s;
-    }
+#items-carrito li button {
+  background-color: #ec407a;
+  padding: 5px 8px;
+  font-weight: normal;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s;
+}
 
-    #items-carrito li button:hover {
-      background-color: #d81b60;
-    }
+#items-carrito li button:hover {
+  background-color: #d81b60;
+}
 
-    /* FORMULARIO CONTACTO */
-    .seccion {
-      max-width: 600px;
-      margin: 40px auto;
-      background-color: #f5cfbd;
-      padding: 20px;
-      border-radius: 10px;
-      border: 2px solid #f06292;
-    }
+.seccion {
+  max-width: 600px;
+  margin: 40px auto;
+  background-color: #2f2533;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid #f06292;
+}
 
-    .seccion h2 {
-      color: #6d1b7b;
-    }
+.seccion h2 {
+  color: #f48fb1;
+}
 
-    form input, form textarea {
-      width: 100%;
-      padding: 10px;
-      margin: 8px 0;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 1em;
-      box-sizing: border-box;
-    }
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #5e4566;
+  border-radius: 5px;
+  font-size: 1em;
+  box-sizing: border-box;
+  background-color: #1e1e1e;
+  color: #fff;
+}
 
-    button[type="submit"] {
-      background-color: #f06292;
-      color: white;
-      border: none;
-      padding: 10px 15px;
-      border-radius: 5px;
-      cursor: pointer;
-      font-weight: bold;
-      transition: background-color 0.3s;
-    }
+button[type="submit"] {
+  background-color: #f06292;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
 
-    button[type="submit"]:hover {
-      background-color: #e91e63;
-    }
+button[type="submit"]:hover {
+  background-color: #e91e63;
+}
 
-    footer {
-      background-color: #ffb4b4;
-      text-align: center;
-      padding: 15px;
-      margin-top: 40px;
-      color: #6d1b7b;
-      font-size: 0.9em;
-    }
+footer {
+  background-color: #1e1e1e;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+  color: #b089a4;
+  font-size: 0.9em;
+}
 
-    /* Responsivo para móvil */
-    @media (max-width: 700px) {
-      .productos {
-        flex-direction: column;
-        align-items: center;
-      }
+/* Responsivo para móvil */
+@media (max-width: 700px) {
+  .productos {
+    flex-direction: column;
+    align-items: center;
+  }
 
-      .producto {
-        width: 90%;
-        max-width: 350px;
-      }
-    }
+  .producto {
+    width: 90%;
+    max-width: 350px;
+  }
+}
+
   </style>
 </head>
 <body>
