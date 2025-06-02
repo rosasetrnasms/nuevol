@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BOHO | Estilo Bohemio</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #ffb4b4;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    header {
+      background-color: #FFDCDC;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+      color: #6d1b7b;
+    }
+
+    .eslogan {
+      font-style: italic;
+      margin: 5px 0 15px;
+    }
+
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #6d1b7b;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* CATÁLOGO */
+    .catalogo {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #ffe9e3;
+      border-radius: 15px;
+      border: 2px solid #e6a4b4;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .catalogo h2 {
+      text-align: center;
+      color: #7b3e57;
+      font-size: 2.2em;
+      margin-bottom: 30px;
+    }
+
+    /* Flex para productos */
+    .productos {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      justify-content: center;
+    }
+
+    /* Cada tarjeta producto */
+    .producto {
+      background-color: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      padding: 15px;
+      width: 260px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: 1px solid #ffdadf;
+    }
+
+    .producto:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    .producto img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .producto h3 {
+      color: #8b3a62;
+      font-size: 1.2em;
+      margin: 10px 0 5px;
+      text-align: center;
+    }
+
+    .producto p {
+      font-size: 0.95em;
+      margin: 4px 0;
+      text-align: center;
+    }
+
+    .producto button {
+      margin-top: auto;
+      padding: 10px 15px;
+      background-color: #f48fb1;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font-weight: bold;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .producto button:hover {
+      background-color: #ec407a;
+    }
+
+    /* CARRITO */
+    .seccion.carrito {
+      max-width: 600px;
+      margin: 40px auto;
+      background-color: #f5cfbd;
+      padding: 20px;
+      border-radius: 10px;
+      border: 2px solid #f06292;
+    }
+
+    .seccion.carrito h2 {
+      color: #6d1b7b;
+      text-align: center;
+    }
+
+    #items-carrito {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+    }
+
+    #items-carrito li {
+      background-color: white;
+      margin-bottom: 8px;
+      padding: 10px;
+      border-radius: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid #f06292;
+    }
+
+    #items-carrito li button {
+      background-color: #ec407a;
+      padding: 5px 8px;
+      font-weight: normal;
+      border-radius: 4px;
+      cursor: pointer;
+      border: none;
+      transition: background-color 0.3s;
+    }
+
+    #items-carrito li button:hover {
+      background-color: #d81b60;
+    }
+
+    /* FORMULARIO CONTACTO */
+    .seccion {
+      max-width: 600px;
+      margin: 40px auto;
+      background-color: #f5cfbd;
+      padding: 20px;
+      border-radius: 10px;
+      border: 2px solid #f06292;
+    }
+
+    .seccion h2 {
+      color: #6d1b7b;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1em;
+      box-sizing: border-box;
+    }
+
+    button[type="submit"] {
+      background-color: #f06292;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #e91e63;
+    }
+
+    footer {
+      background-color: #ffb4b4;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+      color: #6d1b7b;
+      font-size: 0.9em;
+    }
+
+    /* Responsivo para móvil */
+    @media (max-width: 700px) {
+      .productos {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .producto {
+        width: 90%;
+        max-width: 350px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+          <img src=ttt.jpg alt="logo" />
+    <h1>BOHO</h1>
+    <p class="eslogan">"Tu estilo comienza desde el cabello"</p>
+  
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="boho.html">Catálogo</a>
+      <a href="contactos.html">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="catalogo" id="catalogo">
+      <h2>Catálogo</h2>
+      <div class="productos">
+        <div class="producto">
+          <img src=mira.jpg alt="Horquilla con flor" />
+          <h3>Horquillas con flores</h3>
+          <p>Color plata con flor y detalles negros.</p>
+          <p><strong>Precio: $50.00</strong></p>
+          <button data-nombre="Horquillas con flores" data-precio="50">Comprar</button>
+        </div>
+
+        <div class="producto">
+          <img src=pute.jpg alt="Horquilla en forma de espada" />
+          <h3>Horquillas de espada</h3>
+          <p>Diseño de espada con detalles plateados y rojo.</p>
+          <p><strong>Precio: $50.00</strong></p>
+          <button data-nombre="Horquillas de espada" data-precio="50">Comprar</button>
+        </div>
+
+        <div class="producto">
+          <img src=igual.jpg alt="Horquilla con nudo" />
+          <h3>Horquillas de nudo</h3>
+          <p>Diseño elegante con nudo estilizado.</p>
+          <p><strong>Precio: $50.00</strong></p>
+          <button data-nombre="Horquillas de nudo" data-precio="50">Comprar</button>
+        </div>
+
+        <div class="producto">
+          <img src=liuna.jpg alt="Horquilla de luna" />
+          <h3>Horquillas de luna</h3>
+          <p>Color negro con luna a juego.</p>
+          <p><strong>Precio: $40.00</strong></p>
+          <button data-nombre="Horquillas de luna" data-precio="40">Comprar</button>
+        </div>
+
+        <div class="producto">
+          <img src=logro.jpg alt="Horquilla de mariposa" />
+          <h3>Horquillas de mariposa</h3>
+          <p>Negro con mariposas azul y adornos.</p>
+          <p><strong>Precio: $50.00</strong></p>
+          <button data-nombre="Horquillas de mariposa" data-precio="50">Comprar</button>
+        </div>
+
+        <div class="producto">
+          <img src= 987.jpg alt="Horquilla de estrella" />
+          <h3>Horquillas de estrella</h3>
+          <p>Color plata con estrella azul claro.</p>
+          <p><strong>Precio: $50.00</strong></p>
+          <button data-nombre="Horquillas de estrella" data-precio="50">Comprar</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion carrito" id="carrito">
+      <h2>Carrito de Compras</h2>
+      <ul id="items-carrito"></ul>
+      <p><strong>Total: $<span id="total">0.00</span></strong></p>
+    </section>
+<section class="seccion metodo-pago">
+  <h2>Método de Pago</h2>
+  <form id="form-pago">
+    <label><input type="radio" name="metodo" value="PayPal" required /> PayPal</label><br />
+    <label><input type="radio" name="metodo" value="Transferencia" /> Transferencia bancaria</label><br />
+    <label><input type="radio" name="metodo" value="Tarjeta" /> Tarjeta de crédito/débito</label><br />
+    <label><input type="radio" name="metodo" value="Contra entrega" /> Pago contra entrega</label><br />
+    <script>
+  function obtenerCarrito() {
+    const carritoJSON = localStorage.getItem('carrito');
+    return carritoJSON ? JSON.parse(carritoJSON) : [];
+  }
+
+  function guardarCarrito(carrito) {
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+  }
+
+  function actualizarCarrito() {
+    const carrito = obtenerCarrito();
+    const lista = document.getElementById('items-carrito');
+    const totalSpan = document.getElementById('total');
+    lista.innerHTML = '';
+    let total = 0;
+
+    carrito.forEach((item, index) => {
+      const li = document.createElement('li');
+      li.textContent = `${item.nombre} - $${item.precio.toFixed(2)}`;
+
+      const btnEliminar = document.createElement('button');
+      btnEliminar.textContent = 'Eliminar';
+      btnEliminar.onclick = () => {
+        carrito.splice(index, 1);
+        guardarCarrito(carrito);
+        actualizarCarrito();
+      };
+
+      li.appendChild(btnEliminar);
+      lista.appendChild(li);
+      total += item.precio;
+    });
+
+    totalSpan.textContent = total.toFixed(2);
+  }
+
+  // Formulario de método de pago
+  document.getElementById('form-pago').addEventListener('submit', e => {
+    e.preventDefault();
+    const metodoSeleccionado = document.querySelector('input[name="metodo"]:checked');
+    if (!metodoSeleccionado) {
+      alert('Por favor selecciona un método de pago.');
+      return;
+    }
+
+    const carrito = obtenerCarrito();
+    if (carrito.length === 0) {
+      alert('Tu carrito está vacío.');
+      return;
+    }
+
+    alert(`Has seleccionado pagar con: ${metodoSeleccionado.value}. Gracias por tu compra.`);
+    localStorage.removeItem('carrito');
+    actualizarCarrito();
+    e.target.reset();
+  });
+
+  // Botones de compra
+  document.querySelectorAll('.producto button').forEach(boton => {
+    boton.addEventListener('click', () => {
+      const nombre = boton.getAttribute('data-nombre');
+      const precio = parseFloat(boton.getAttribute('data-precio'));
+      const carrito = obtenerCarrito();
+      carrito.push({ nombre, precio });
+      guardarCarrito(carrito);
+      actualizarCarrito();
+    });
+  });
+
+  // Inicializar carrito al cargar
+  document.addEventListener('DOMContentLoaded', actualizarCarrito);
+
+  // Formulario de contacto
+  document.getElementById('form-contacto').addEventListener('submit', e => {
+    e.preventDefault();
+    alert('¡Mensaje enviado con éxito!');
+    e.target.reset();
+  });
+</script>
+    <button type="submit">Proceder al pago</button>
+  </form>
+</section>
+    <section class="seccion" id="contacto">
+      <h2>Contáctanos</h2>
+      <p>Escríbenos para más información o para hacer tu pedido.</p>
+      <form id="form-contacto">
+        <input type="text" placeholder="Tu nombre" required />
+        <input type="email" placeholder="Tu correo" required />
+        <textarea rows="5" placeholder="Tu mensaje" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 BOHO. Todos los derechos reservados.</p>
+  </footer>
+
+
+
+</body>
+</html>
